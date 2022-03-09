@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<style>
+    .contact{
+        background-color:purple;
+        height:34vh;
+    }
+    .text-center{
+        text-align:center;
+    }
+    .forms{
+        max-width:1000px;
+        margin:42px auto;
+    }
+    .forms input{
+        margin:35px 0;
+        padding:5px 3px;
+        width:100%;
+        font-size:20px;
+        border:1px solid purple;
+        border-radius:6px;
+    }
+    .btn-dark{
+        color:white;
+        background-color:purple;
+        border:3px solid purple;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .container{
+        background-color:light grey;
+    }
+</style>
+
+
+<div class="container" id="container">
+    <section class="contacts">
+        <h2 class="text-center">contact us</h2>
+        <div class="forms">
+            <form method="POST" action="/contact">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="name">Name</lebel>
+                <input type="text" name="name" id="name" placeholder="Enter you name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</lebel>
+                <input type="email" name="email" id="email" placeholder="Enter you email" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="phone">Phone</lebel>
+                <input type="phone" name="phone" id="phone" placeholder="Enter you phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="stream">Stream</lebel>
+                <input type="text" name="stream" id="stream" placeholder="Enter you stream" required>
+            </div>
+
+            <div class="form-group">
+                <label for="concern">Concern</lebel>
+                <textarea class="form-input" name="concern" id="concern" placeholder="Enter you concern"  cols=136 rows=10 required></textarea>
+            </div> 
+
+            <button type="submit" class="btn-dark">Submit</button>
+            </form>
+        </div>
+    </section>
+
+{% endblock body %}

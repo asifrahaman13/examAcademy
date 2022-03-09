@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} BlogHome {% endblock title %} 
+
+
+{% block body %}
+
+<style>
+    .container my-3{
+        padding:200px;
+        background-color: red;
+    }
+    .container{
+        color: red;
+        padding:100px;
+        background-color: green;
+        margin:200px;
+    }
+</style>
+
+
+
+<div class="container my-3">
+    <h2>Coding Articles by iCoder</h2>
+    <div class="container">
+    {% for post in allposts  %}
+
+    {{post.head1}}
+         
+    {% endfor %}
+    </div>
+</div>
+ {% endblock %}

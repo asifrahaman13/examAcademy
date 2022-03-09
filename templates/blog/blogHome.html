@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<style>
+    .container{
+        padding:100px;
+        background-color: purple;
+    }
+    .btn{
+        color: white;
+        background-color: purple;
+    }
+</style>
+
+
+<div class="container my-3">
+    {% for posts in allposts %}
+    <h1>{{posts.head1}}</h1>
+    <h3>{{posts.chead1}}</h3>
+    <h1>{{posts.head2}}</h1>
+    <h3>{{posts.chead2}}</h3>
+    <h1>{{posts.head3}}</h1>
+    <h3>{{posts.chead3}}</h3>
+    <a class="btns" href="/" ><button class="btn">go  back to home</button></a>
+    {% endfor %}
+</div>
+
+         
+{% endblock body %}
