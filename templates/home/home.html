@@ -11,20 +11,22 @@
         background-color: red;
     }
     .container{
-        color: red;
+        color: white;
         padding:100px;
-        background-color: green;
+        background-color: purple;
         margin:200px;
+    }
+    h1{
+        text-align: center;
     }
 </style>
 
 
 
 <div class="container my-3">
-    <h2>Coding Articles by iCoder</h2>
+    <h1>Coding Articles by iCoder</h1>
     <div class="container">
     {% for post in allposts  %}
-
     {{post.head1}}
          
     {% endfor %}

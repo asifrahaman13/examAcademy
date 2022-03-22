@@ -221,6 +221,7 @@ ul{
 
 
 
+
     </style>
     
 </head>
@@ -229,7 +230,8 @@ ul{
     <nav class="navbar background  h-nav-resp">
         <ul class="nav-list v-class-resp" style="list-style: none;">
             {% load static %}
-            <div class="logo"><img src="{% static 'D:\web_developement_projects\examAcademy\templates\static\laptop.jpg' %}" alt="logo"></div>
+            {% comment %} <div class="logo"><img src="{% static 'home/static/laptop.jpg' %}" alt="logo"></div> {% endcomment %}
+            <a href="{% static 'home/static/a.txt' %}">Click me</a>
             <li><a href="/" name="home" id="home">home</a></li>
             <li><a href="/blog" name="blog" id="blog">blog</a></li>
             <li><a href="/about" name="about" id="about">about</a></li>
