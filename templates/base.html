@@ -29,6 +29,7 @@
 }
 
 .navbar{
+    height:50px;
     display:flex;
     align-items: center;
     justify-content:center;
@@ -80,7 +81,7 @@ ul{
     border-radius: 5px;
 }
 .background{
-    background:rgba(0,0,0,0) url("https://www.pcgamesn.com/wp-content/uploads/2021/01/Best-Gaming-Laptops-1200x675.jpg");
+    background:rgba(0,0,0,0) url("https://cwsmgmt.corsair.com/hybris/tlc/systems/images/tlc_systems_banner_i7300.png");
     background-size:cover;
     background-blend-mode: darken;
 }
@@ -218,6 +219,18 @@ ul{
     height:4px;
     margin:3px 3px;
 }
+.btn{
+    background-color:white;
+    color:rgb(196, 3, 173);
+    font-weight:bold;
+    padding:15px;
+}
+#search2{
+    padding:10px;
+}
+#search1{
+    padding:8px;
+}
 
 
 
@@ -231,7 +244,7 @@ ul{
         <ul class="nav-list v-class-resp" style="list-style: none;">
             {% load static %}
             {% comment %} <div class="logo"><img src="{% static 'home/static/laptop.jpg' %}" alt="logo"></div> {% endcomment %}
-            <a href="{% static 'home/static/a.txt' %}">Click me</a>
+            <!-- <a href="{% static 'home/static/a.txt' %}">Click me</a> -->
             <li><a href="/" name="home" id="home">home</a></li>
             <li><a href="/blog" name="blog" id="blog">blog</a></li>
             <li><a href="/about" name="about" id="about">about</a></li>
@@ -239,8 +252,8 @@ ul{
             <li><a href="/login" name="login" id="login">login</a></li>
         </ul>
         <div class="rightnav v-class-resp">
-            <input type="text" name="search" id="search" placeholder="search something">
-            <button class="btn btn-sm">search</button>
+            <input type="text" name="search" id="search1" placeholder="search something">
+            <button class="btn btn-sm" id="search2">search</button>
         </div>
         <div class="bargar">
             <div class="line"></div>
@@ -257,8 +270,8 @@ ul{
                 <p class="text-small">in the world of 7 billion people we can educate new gneration of people so why
                     donyt you join our hand in ore to build a world?</p>
                 <div class="buttons">
-                    <button class="btn">subscribe</button>
-                    <button class="btn">watch video</button>
+                    <button class="btn"><h3>subscribe</button></button>
+                    <button class="btn"><h3>watch video</button></button>
                 </div>
 
             </div>
